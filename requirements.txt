@@ -1,3 +1,4 @@
 Flask
 gunicorn
 ibm-db
+MarkupSafe==0.23
