@@ -1,0 +1,14 @@
+---
+applications:
+- name: myapp
+  memory: 512M
+  disk_quota: 1G
+  random-route: true
+  buildpacks: 
+  - python_buildpack
+  command: python hello.py
+  env:
+    IBM_DB_HOME: "/tmp/app/clidriver"
+    LD_LIBRARY_PATH: "/tmp/app/clidriver/lib:$LD_LIBRARY_PATH"
+#    IBM_DB_HOME: "/home/vcap/app/clidriver"
+#    LD_LIBRARY_PATH: "/home/vcap/app/clidriver/lib:$LD_LIBRARY_PATH"
